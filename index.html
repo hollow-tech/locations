@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="#" class="header__logo">
+            <img src="img/header/logo.svg" alt="logo" />
+          </a>
+          <a href="#" class="header__exit">
+            <img src="img/header/exit.svg" alt="" />
+          </a>
+        </div>
+      </header>
+      <main class="main">
+        <div class="main__container">
+          <aside class="aside close">
+            <ul class="aside__list">
+              <li class="aside__item">
+                <a href="#" class="aside__link">
+                  <img src="../img/aside/asset.svg" alt="asset" />
+                  <span class="aside__text">Имущество</span></a
+                >
+              </li>
+              <li class="aside__item">
+                <a href="#" class="aside__link">
+                  <img src="../img/aside/inventory.svg" alt="inventory" />
+                  <span class="aside__text">Инвентаризация</span></a
+                >
+              </li>
+              <li class="aside__item">
+                <a href="#" class="aside__link">
+                  <img src="../img/aside/staff.svg" alt="staff" />
+                  <span class="aside__text">Сотрудники</span></a
+                >
+              </li>
+              <li class="aside__item">
+                <a href="#" class="aside__link">
+                  <img src="../img/aside/notifications.svg" alt="notifications" />
+                  <span class="aside__text">Уведомления</span></a
+                >
+              </li>
+              <li class="aside__item">
+                <a href="#" class="aside__link">
+                  <img src="../img/aside/locations.svg" alt="locations" />
+                  <span class="aside__text">Локации</span></a
+                >
+              </li>
+              <li class="aside__item">
+                <a href="#" class="aside__link">
+                  <img src="../img/aside/settings.svg" alt="settings" />
+                  <span class="aside__text">Настройки</span></a
+                >
+              </li>
+            </ul>
+            <div class="aside__toggle">
+              <img src="./img/aside/arrow-left.svg" alt="arrow" />
+              <span> Скрыть меню </span>
+            </div>
+          </aside>
+          <section class="section-locations locations">
+            <div class="locations__content">
+              <div class="locations__title">Локации / Все локации</div>
+              <div class="locations__buttons">
+                <button class="locations__button active">Все локации</button>
+                <button class="locations__button">Импорт/Экспорт</button>
+                <button class="locations__button">Настройки</button>
+              </div>
+              <button class="locations__button--create">
+                <img src="./img/locations/plus.svg" alt="plus" />Создать локацию
+              </button>
+              <div id="myModal" class="modal">
+
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+ <form class="create-form">
+  <div class="create-form__inner">
+     <div class="create-form__title">
+    Создать локацию
+  </div>
+  <input class="create-form__input" type="text" id="fname" name="fname" placeholder="Название">
+  <input class="create-form__input" type="text" id="lname" name="lname" placeholder="Штрихкод">
+  <input class="create-form__input" type="text" id="lname" name="lname" placeholder="RFID">
+  <div class="create-form__select custom-select" >
+  <select>
+    <option value="0">Select car:</option>
+    <option value="1">option 1</option>
+    <option value="2">option 2</option>
+    <option value="3">option 3</option>
+    <option value="4">option 4</option>
+  </select>
+
+
+</div>
+<div class="toggle-container">
+  <div>Виртуальная локация</div>
+  <div>
+<div class="toggle-switch">
+    <input type="checkbox" id="toggle1" class="toggle-switch__checkbox">
+    <label for="toggle1" class="toggle-switch__label">
+        <span class="toggle-switch__inner"></span>
+    </label>
+</div>
+
+  </div>
+</div>
+<div class="toggle-container">
+  <div>Локация для утерь</div>
+  <div>
+<div class="toggle-switch">
+    <input type="checkbox" id="toggle2" class="toggle-switch__checkbox">
+    <label for="toggle2" class="toggle-switch__label">
+        <span class="toggle-switch__inner"></span>
+    </label>
+</div>
+
+  </div>
+</div>
+  <div class="create-form__buttons">
+    <button class="create-form__button create-form__button--contained">
+      <img src="./img/modal/create-button.svg" alt="">Создать
+    </button>
+    <button class="create-form__button create-form__button--outlined">
+      Отменить
+    </button>
+  </div>
+  </div>
+
+</form>
+  </div>
+
+</div>
+              <div class="locations__treeview treeview">
+                <ul>
+                  <li>
+                    <span class="treeview__toggle">+</span
+                    ><span class="treeview__text">Локация 1</span>
+                    <span class="treeview__value">512</span>
+                    <span class="treeview__tools">
+                      <span class="treeview__edit">
+                        <img src="./img/locations/edit.svg" alt="edit" />Редактировать</span
+                      >
+                      <span class="treeview__delete"
+                        ><img src="./img/locations/delete.svg" alt="delete" />Удалить</span
+                      >
+                    </span>
+                    <ul class="treeview__nested">
+                      <li>
+                        <span class="treeview__toggle">+</span
+                        ><span class="treeview__text">Подотдел 1</span>
+                        <span class="treeview__value">10</span>
+                        <span class="treeview__info">Для утерь</span>
+                      </li>
+                      <li>
+                        <span class="treeview__toggle">+</span
+                        ><span class="treeview__text">Подотдел 2</span>
+                        <span class="treeview__value">100</span>
+                        <ul class="treeview__nested">
+                          <li>
+                            <span class="treeview__text">Подподотдел 1</span
+                            ><span class="treeview__value">2</span>
+                            <span class="treeview__info">Виртуальная</span>
+                            <span class="treeview__barcode">Без штрихкода</span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span class="treeview__toggle">+</span
+                        ><span class="treeview__text">Подотдел 3</span>
+                        <span class="treeview__value">400</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="treeview__toggle">+</span
+                    ><span class="treeview__text">Локация 2</span>
+                    <span class="treeview__value">100</span>
+                    <span class="treeview__tools">
+                      <span class="treeview__edit">
+                        <img src="./img/locations/edit.svg" alt="edit" />Редактировать</span
+                      >
+                      <span class="treeview__delete"
+                        ><img src="./img/locations/delete.svg" alt="delete" />Удалить</span
+                      >
+                    </span>
+                    <ul class="treeview__nested">
+                      <li>Подотдел Локация 2</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="treeview__toggle">+</span
+                    ><span class="treeview__text">Локация 3</span>
+                    <span class="treeview__value">100</span>
+                    <span class="treeview__tools">
+                      <span class="treeview__edit">
+                        <img src="./img/locations/edit.svg" alt="edit" />Редактировать</span
+                      >
+                      <span class="treeview__delete"
+                        ><img src="./img/locations/delete.svg" alt="delete" />Удалить</span
+                      >
+                    </span>
+                    <ul class="treeview__nested">
+                      <li>Подотдел Локация 3</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="locations__sync sync">
+              <div class="sync__button">
+                <img src="./img/locations/sync.svg" alt=""> синхронизация (17.05.2024 15:23:21)
+              </div>
+              <div class="sync__inner">
+                <label class="sync__container">
+                  <input type="checkbox" checked="checked" />
+                  <span class="sync__checkmark"></span>
+                  Поиск по точному вхождению
+                </label>
+                <input class="sync__search" type="text" name="search" placeholder="ПОИСК"></input>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <span class="footer__container" >
+          <span class="footer__text" >Последний приём 20.09.2021 18:36:21</span>
+          <span class="footer__text">Последняя передача  20.09.2021 18:38:21</span>
+        </span>
+        <a href="#" class="footer__doc"><img src="../img/footer/docs.svg" alt="doc">Документация</a>
+      </footer>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
